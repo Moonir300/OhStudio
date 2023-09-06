@@ -1,0 +1,336 @@
+@font-face {
+  font-family: "neu bold";
+  src: url(./assets/NeueMontreal-Bold.otf);
+}
+@font-face {
+  font-family: "neu light";
+  src: url(./assets/NeueMontreal-Light.otf);
+}
+@font-face {
+  font-family: "neu medium";
+  src: url(./assets/NeueMontreal-Medium.otf);
+}
+@font-face {
+  font-family: "neu regular";
+  src: url(./assets/NeueMontreal-Regular.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+  overflow-x: hidden;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  background-color: rgba(199, 199, 199, 0.307);
+  padding: 0.2em;
+  margin-block: 2em;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  position: fixed;
+  z-index: 100;
+  backdrop-filter: blur(20px);
+  box-shadow: 0px 10px 20px 0px rgba(22, 22, 22, 0.031);
+}
+
+nav a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.632);
+  padding: 0.8em 1.6em;
+  border-radius: 100px;
+  text-transform: capitalize;
+  font-family: "neu regular";
+}
+#home {
+  background-color: white;
+  color: black;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  top: 8em;
+  position: relative;
+  align-items: center;
+  width: 100%;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2.5em;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 4.5em;
+  width: 65%;
+  font-family: "neu regular";
+  transition: 0.5s ease-in-out;
+}
+
+.hero .features {
+  display: flex;
+  flex-direction: row;
+  width: 35%;align-items: center;
+  justify-content: space-between;
+  font-family: "neu regular";
+}
+#brdr {
+  background-color: rgba(211, 211, 211, 0.342);
+  padding: 0.4em 0.7em;
+  border-radius: 100px;
+  transition: 0.5s ease-in-out;
+}
+
+.gallery {
+  width: 95%;
+  display: grid;
+  row-gap: 2em;
+  column-gap: 1em;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.gallery a {
+  height: 28em;
+  border-radius: 0.7em;
+  background-size: cover;
+  display: flex;
+  text-decoration: none;
+  font-family: "neu regular";
+  justify-content: center;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.gallery a .hover {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  height: 4em;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+}
+.gallery a #bg {
+  position: absolute;
+  height: 110%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  align-self: center;
+  justify-self: center;
+  object-fit: contain;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+
+.gallery a video {
+  height: 120%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  align-self: center;
+  justify-self: center;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+
+.gallery a span {
+  z-index: 1;
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.2em;
+  transition: 0.5s ease-in-out;
+}
+.gallery a .hover .hover-text {
+  opacity: 0;
+  height: fit-content;
+  align-self: center;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
+}
+.gallery a .arrow-icon {
+  z-index: 1;
+  margin-inline-end: 1em;
+  opacity: 0;
+  height: fit-content;
+  width: 5%;
+  transition: 0.3s ease-in-out;
+}
+.gallery a:hover .arrow-icon {
+  margin-inline-end: 0;
+}
+.gallery a #bg,
+.gallery .hover-text,
+.gallery .arrow-icon,
+.gallery a video,
+.gallery a:hover .arrow-icon {
+  transition: 0.3s ease-in-out;
+}
+
+.gallery a:hover .hover-text,
+.gallery a:hover .arrow-icon {
+  opacity: 1;
+}
+.gallery a:hover #bg,
+.gallery a:hover video {
+  filter: blur(10px) brightness(80%);
+}
+
+#cmng {
+  left: 0;
+  top: 0;
+  font-size: 1.1rem;
+  opacity: 0.5;
+}
+.low {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "neu regular";
+  font-size: 1.3em;
+  margin-block: 15vh;
+}
+.low a {
+  font-family: "neu medium";
+  font-size: 2em;
+  text-decoration: none;
+  color: rgb(158, 158, 158);
+}
+.low a:hover {
+  color: rgb(97, 97, 97);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+footer {
+  width: 94%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 0.9em;
+  margin-block-end: 1.7em;
+  text-transform: capitalize;
+}
+footer .links {
+  display: flex;
+  gap: 2vw;
+}
+footer .links a {
+  text-decoration: none;
+  font-family: "neu regular";
+  color: black;
+}
+footer .links a:hover {
+  opacity: 0.6;
+}
+#shop {
+  position: fixed;
+  bottom: 2em;
+  z-index: 100;
+  border-radius: 100px;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+#shop button {
+  background-color: black;
+  color: white;
+  outline: none;
+  border: none;
+  width: 7em;
+  border-radius: 100px;
+  height: 3em;
+  font-size: 1em;
+  font-family: "neu regular";
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  gap: 0.5em;
+}
+#shop button img {
+  width: 1em;
+}
+
+@media (width < 425px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    top: 10em;
+    position: relative;
+    align-items: center;
+    width: 100%;
+  }
+  .hero h1 {
+    font-size: 2em;
+    width: 80%;
+    font-family: "neu regular";
+    transition: 0.5s ease-in-out;
+  }
+  .hero .features {
+    display: flex;
+    flex-direction: row;
+    width: 82%;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "neu regular";
+  }
+  .hero .features span {
+    font-size: .8em;
+  }
+  .gallery {
+    width: 90%;
+    display: grid;
+    row-gap: 2em;
+    column-gap: 1em;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
+  }
+  .gallery a {
+    height: 15em;
+    border-radius: 0.7em;
+    background-size: cover;
+    display: flex;
+    text-decoration: none;
+    font-family: "neu regular";
+    justify-content: center;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+  }
+  footer{
+    
+    font-size: .8em;
+    align-items: last baseline;
+  }
+  footer .links {
+    display: flex;
+    flex-direction: rwo;
+    align-items: end;
+    gap: 1em;
+  }
+  #shop {
+    position: fixed;
+    bottom: 5em;
+    z-index: 100;
+    border-radius: 100px;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+  }
+}
