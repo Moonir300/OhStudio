@@ -1,18 +1,18 @@
 @font-face {
   font-family: "neu bold";
-  src: url(./assets/NeueMontreal-Bold.otf);
+  src: url(./NeueMontreal-Bold.otf);
 }
 @font-face {
   font-family: "neu light";
-  src: url(./assets/NeueMontreal-Light.otf);
+  src: url(./NeueMontreal-Light.otf);
 }
 @font-face {
   font-family: "neu medium";
-  src: url(./assets/NeueMontreal-Medium.otf);
+  src: url(./NeueMontreal-Medium.otf);
 }
 @font-face {
   font-family: "neu regular";
-  src: url(./assets/NeueMontreal-Regular.otf);
+  src: url(./NeueMontreal-Regular.otf);
 }
 
 * {
@@ -84,7 +84,8 @@ main {
 .hero .features {
   display: flex;
   flex-direction: row;
-  width: 35%;align-items: center;
+  width: 35%;
+  align-items: center;
   justify-content: space-between;
   font-family: "neu regular";
 }
@@ -105,9 +106,8 @@ main {
 }
 
 .gallery a {
-  height: 28em;
+  height: 35em;
   border-radius: 0.7em;
-  background-size: cover;
   display: flex;
   text-decoration: none;
   font-family: "neu regular";
@@ -128,7 +128,7 @@ main {
 }
 .gallery a #bg {
   position: absolute;
-  height: 110%;
+  height: 120%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -169,7 +169,7 @@ main {
   margin-inline-end: 1em;
   opacity: 0;
   height: fit-content;
-  width: 5%;
+  width: 2em;
   transition: 0.3s ease-in-out;
 }
 .gallery a:hover .arrow-icon {
@@ -272,7 +272,7 @@ footer .links a:hover {
     display: flex;
     flex-direction: column;
     gap: 3em;
-    top: 10em;
+    top: 9em;
     position: relative;
     align-items: center;
     width: 100%;
@@ -292,7 +292,7 @@ footer .links a:hover {
     font-family: "neu regular";
   }
   .hero .features span {
-    font-size: .8em;
+    font-size: 0.8em;
   }
   .gallery {
     width: 90%;
@@ -315,9 +315,8 @@ footer .links a:hover {
     overflow: hidden;
     transition: 0.5s ease-in-out;
   }
-  footer{
-    
-    font-size: .8em;
+  footer {
+    font-size: 0.8em;
     align-items: last baseline;
   }
   footer .links {
